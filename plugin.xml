@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.stc.IntentExtrasPlugin"
+        version="0.0.1">
+
+    <name>Intent Extras Plugin</name>
+    <description>Cordova Plugin for Android to access intent extras</description>
+    <license>MIT</license>
+
+    <keywords>cordova,intent,extras,android</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IntentPlugin">
+                <param name="android-package" value="com.stc.IntentExtrasPlugin"/>
+            </feature>
+        </config-file>
+
+        <js-module src="www/android/IntentExtrasPlugin.js" name="IntentExtrasPlugin">
+            <clobbers target="IntentExtrasPlugin" />
+        </js-module>
+
+        <source-file src="src/android/IntentExtrasPlugin.java" target-dir="src/com/stc" />
+
+    </platform>
+
+</plugin>
