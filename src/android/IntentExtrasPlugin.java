@@ -66,8 +66,11 @@ public class IntentExtrasPlugin extends CordovaPlugin {
                 for (String key : bundle.keySet()) {
                     jsonObject.put(key, bundle.get(key) != null ? bundle.get(key) : "NULL");
                 }
+                context.sendPluginResult(new PluginResult(PluginResult.Status.OK, jsonObject));
             }
-            context.sendPluginResult(new PluginResult(PluginResult.Status.OK, jsonObject));
+            else {
+                context.sendPluginResult(new PluginResult(PluginResult.Status.OK, null));
+            }
         }
         catch(JSONException ex) {
             context.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, ex.getMessage()));
