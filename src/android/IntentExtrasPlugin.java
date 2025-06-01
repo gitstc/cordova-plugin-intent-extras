@@ -1,26 +1,12 @@
 package com.stc;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Set;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.provider.MediaStore;
-import android.database.Cursor;
-import android.content.ClipData;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.net.Uri;
-
-import android.content.ContentResolver;
-import android.content.Context;
-import android.webkit.MimeTypeMap;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
