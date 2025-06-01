@@ -70,7 +70,7 @@ public class IntentExtrasPlugin extends CordovaPlugin {
             context.sendPluginResult(new PluginResult(PluginResult.Status.OK, jsonObject));
         }
         catch(JSONException ex) {
-            context.sendPluginResult(new PluginResult(PluginResult.Status.OK, "JSON_ERROR" + ex.getMessage()));
+            context.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, ex.getMessage()));
         }
         return true;
     }
