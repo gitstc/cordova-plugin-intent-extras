@@ -1,26 +1,26 @@
-function IntentPlugin() {
+function IntentExtrasPlugin() {
     'use strict';
 }
 
-IntentPlugin.prototype.getExtras = function(successCallback, failureCallback) {
+IntentExtrasPlugin.prototype.getExtras = function(successCallback, failureCallback) {
     'use strict';
 
     return cordova.exec (
         successCallback,
         failureCallback,
-        "IntentPlugin",
+        "IntentExtrasPlugin",
         "getExtras",
         []
     );
 };
 
-var intentInstance = new IntentPlugin();
+var intentInstance = new IntentExtrasPlugin();
 module.exports = intentInstance;
 
 // Make plugin work under window.plugins
 if (!window.plugins) {
     window.plugins = {};
 }
-if (!window.plugins.intent) {
-    window.plugins.intent = intentInstance;
+if (!window.plugins.IntentExtrasPlugin) {
+    window.plugins.IntentExtrasPlugin = intentInstance;
 }
